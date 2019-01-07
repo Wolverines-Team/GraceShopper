@@ -26,6 +26,23 @@ const User = db.define('user', {
   },
   googleId: {
     type: Sequelize.STRING
+  },
+  cartId: {
+    type: Sequelize.INTEGER
+  },
+  history: {
+    type: Sequelize.ARRAY(Sequelize.INTEGER)
+  },
+  role: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
+  },
+  sessionId: {
+    type: Sequelize.STRING
+  },
+  visits: {
+    type: Sequelize.INTEGER,
+    defaultValue: 0
   }
 })
 
