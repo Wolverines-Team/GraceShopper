@@ -17,6 +17,6 @@ const Stock = require('./stock')
  */
 
 module.exports = {
-  User,
+  User, Address,
   Rating
 }
