@@ -31,7 +31,7 @@ const User = db.define('user', {
     type: Sequelize.INTEGER
   },
   history: {
-    type: Sequelize.ARRAY
+    type: Sequelize.ARRAY(Sequelize.INTEGER)
   },
   role: {
     type: Sequelize.BOOLEAN,
@@ -43,15 +43,6 @@ const User = db.define('user', {
   visits: {
     type: Sequelize.INTEGER,
     defaultValue: 0
-  },
-  addresses: {
-    type: Sequelize.ARRAY({
-      street: Sequelize.STRING,
-      city: Sequelize.STRING,
-      state: Sequelize.STRING,
-      zip: Sequelize.INTEGER,
-      name: Sequelize.STRING
-    })
   }
 })
 

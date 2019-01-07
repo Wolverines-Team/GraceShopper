@@ -14,16 +14,7 @@ async function seed() {
       cartId: 4,
       history: [5, 6],
       role: false,
-      visits: 0,
-      addresses: [
-        // {
-        //   street: '15 Margaret Ct',
-        //   city: 'St. Peters',
-        //   state: 'MO',
-        //   zip: 63376,
-        //   name: 'David Richy'
-        // }
-      ]
+      visits: 0
     }),
     User.create({
       email: 'ShanonSalas@email.com',
@@ -31,16 +22,7 @@ async function seed() {
       cartId: 1,
       history: [2, 3],
       role: false,
-      visits: 12,
-      addresses: [
-        // {
-        //   street: '13520 Rosedown Ct',
-        //   city: 'Boonville',
-        //   state: 'MO',
-        //   zip: 65233,
-        //   name: 'Shanon Salas'
-        // }
-      ]
+      visits: 12
     }),
     User.create({
       email: 'BenSari@email.com',
@@ -48,16 +30,7 @@ async function seed() {
       cartId: 7,
       history: [8, 9],
       role: true,
-      visits: 35,
-      addresses: [
-        {
-          street: '13 West Meadow',
-          city: 'St.Charles',
-          state: 'Il',
-          zip: 63376,
-          name: 'Ben Sari'
-        }
-      ]
+      visits: 35
     }),
     User.create({
       email: 'DannyDevito@email.com',
@@ -65,16 +38,7 @@ async function seed() {
       cartId: 10,
       history: [11, 12],
       role: false,
-      visits: 22,
-      addresses: [
-        {
-          street: '1330 E 53rd St',
-          city: 'Chicago',
-          state: 'Il',
-          zip: 65201,
-          name: 'Danny Devito'
-        }
-      ]
+      visits: 22
     }),
     User.create({
       email: 'DonnyDarko@email.com',
@@ -82,16 +46,7 @@ async function seed() {
       cartId: 13,
       history: [14, 15],
       role: false,
-      visits: 66,
-      addresses: [
-        {
-          street: '13 End St',
-          city: 'Hartford',
-          state: 'Ct',
-          zip: 50291,
-          name: 'Donny Darko'
-        }
-      ]
+      visits: 66
     })
   ])
 
