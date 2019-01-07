@@ -2,15 +2,56 @@
 
 const db = require('../server/db')
 const {User} = require('../server/db/models')
+const {Stock} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
   console.log('db synced!')
 
   const users = await Promise.all([
-    User.create({email: 'cody@email.com', password: '123'}),
-    User.create({email: 'murphy@email.com', password: '123'})
+    User.create({
+      email: 'DavidRichy@email.com',
+      password: 'RichyRich',
+      cartId: 4,
+      history: [5, 6],
+      role: false,
+      visits: 0
+    }),
+    User.create({
+      email: 'ShanonSalas@email.com',
+      password: '123',
+      cartId: 1,
+      history: [2, 3],
+      role: false,
+      visits: 12
+    }),
+    User.create({
+      email: 'BenSari@email.com',
+      password: 'I<3Dogs',
+      cartId: 7,
+      history: [8, 9],
+      role: true,
+      visits: 35
+    }),
+    User.create({
+      email: 'DannyDevito@email.com',
+      password: 'TrashMan',
+      cartId: 10,
+      history: [11, 12],
+      role: false,
+      visits: 22
+    }),
+    User.create({
+      email: 'DonnyDarko@email.com',
+      password: 'RabbitFear',
+      cartId: 13,
+      history: [14, 15],
+      role: false,
+      visits: 66
+    })
   ])
+
+  const stocks = await Promise.all([Stock.create({name: 'Jelly Bean'})])
 
   console.log(`seeded ${users.length} users`)
   console.log(`seeded successfully`)
