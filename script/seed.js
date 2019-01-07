@@ -2,6 +2,7 @@
 
 const db = require('../server/db')
 const {User} = require('../server/db/models')
+const {Stock} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
@@ -49,6 +50,8 @@ async function seed() {
       visits: 66
     })
   ])
+
+  const stocks = await Promise.all([Stock.create({name: 'Jelly Bean'})])
 
   console.log(`seeded ${users.length} users`)
   console.log(`seeded successfully`)
