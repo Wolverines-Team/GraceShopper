@@ -1,7 +1,9 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const Stock = db.define('stocks', {
+const defaultImage = '..../public/images/default_candy.jpeg'
+
+const Stock = db.define('stock', {
   name: {
     type: Sequelize.STRING,
     allowNull: false
@@ -14,7 +16,7 @@ const Stock = db.define('stocks', {
   },
   images: {
     type: Sequelize.STRING,
-    defaultValue: '../public/images/default_candy.jpeg'
+    defaultValue: defaultImage
   },
   quantity: {
     type: Sequelize.NUMBER,
@@ -33,7 +35,7 @@ const Stock = db.define('stocks', {
   category: {
     type: Sequelize.STRING,
     allowNull: false,
-    defaultValue: 'candy'
+    defaultValue: 'Candy'
   },
   averageReview: {
     type: Sequelize.NUMBER,
